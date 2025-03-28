@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"unsafe"
 	"strconv"
+	"unsafe"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 	myUnitVar = 15
 	fmt.Println("My variable is:", myUnitVar)
 
-	var myStringVar string 
+	var myStringVar string
 	myStringVar = "Toteiro"
 	fmt.Println("My variable is:", myStringVar)
 
@@ -34,7 +34,7 @@ func main() {
 	myStringVar2 := "EDLP"
 	fmt.Println("My variable is:", myStringVar2)
 
-	myBoolVar2 := true 
+	myBoolVar2 := true
 	fmt.Println("My variable is:", myBoolVar2)
 
 	// CONSTANTES -> valores que no se pueden modificar, van a ser solo de lectura
@@ -44,7 +44,7 @@ func main() {
 
 	const myStringConst = "La scaloneta"
 	fmt.Println("My const is:", myStringConst)
- 
+
 	// BLOQUES
 
 	myOtherScope := 50
@@ -60,7 +60,6 @@ func main() {
 	}
 
 	// fmt.Println("My variable:", myFirstScope) -> No puedo acceder
-
 
 	// VARIABLE SIZE
 
@@ -82,30 +81,30 @@ func main() {
 	// uint   - Depende de la arquitectura del sistema (32 o 64 bits)
 
 	var my8BitsUintVar uint8 = 20
-	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", my8BitsUintVar, my8BitsUintVar, unsafe.Sizeof(my8BitsUintVar), unsafe.Sizeof(my8BitsUintVar) * 8)
-	
+	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", my8BitsUintVar, my8BitsUintVar, unsafe.Sizeof(my8BitsUintVar), unsafe.Sizeof(my8BitsUintVar)*8)
+
 	var my16BitsUintVar uint16 = 30
-	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", my16BitsUintVar, my16BitsUintVar, unsafe.Sizeof(my16BitsUintVar), unsafe.Sizeof(my16BitsUintVar) * 8)
+	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", my16BitsUintVar, my16BitsUintVar, unsafe.Sizeof(my16BitsUintVar), unsafe.Sizeof(my16BitsUintVar)*8)
 
 	var my32BitsUintVar uint32 = 90
-	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", my32BitsUintVar, my32BitsUintVar, unsafe.Sizeof(my32BitsUintVar), unsafe.Sizeof(my32BitsUintVar) * 8)	
+	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", my32BitsUintVar, my32BitsUintVar, unsafe.Sizeof(my32BitsUintVar), unsafe.Sizeof(my32BitsUintVar)*8)
 
 	var my64BitsUintVar uint64 = 90
-	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", my64BitsUintVar, my64BitsUintVar, unsafe.Sizeof(my64BitsUintVar), unsafe.Sizeof(my64BitsUintVar) * 8)	
+	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", my64BitsUintVar, my64BitsUintVar, unsafe.Sizeof(my64BitsUintVar), unsafe.Sizeof(my64BitsUintVar)*8)
 
 	var uintVar uint = 90
-	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", uintVar, uintVar, unsafe.Sizeof(uintVar), unsafe.Sizeof(uintVar) * 8)	 */
+	fmt.Printf("type: %T, value: %d, bytes: %d, bits: %d \n", uintVar, uintVar, unsafe.Sizeof(uintVar), unsafe.Sizeof(uintVar)*8)
 
 	// FLOAT
 
- 	var float32Var float32 = 3.14
-	fmt.Printf("type: %T, value: %f, bytes: %d, bits: %d \n", float32Var, float32Var, unsafe.Sizeof(float32Var), unsafe.Sizeof(float32Var) * 8)
+	var float32Var float32 = 3.14
+	fmt.Printf("type: %T, value: %f, bytes: %d, bits: %d \n", float32Var, float32Var, unsafe.Sizeof(float32Var), unsafe.Sizeof(float32Var)*8)
 
 	var float64Var float64 = 590.12345
-	fmt.Printf("type: %T, value: %f, bytes: %d, bits: %d \n", float64Var, float64Var, unsafe.Sizeof(float64Var), unsafe.Sizeof(float64Var) * 8)
+	fmt.Printf("type: %T, value: %f, bytes: %d, bits: %d \n", float64Var, float64Var, unsafe.Sizeof(float64Var), unsafe.Sizeof(float64Var)*8)
 
 	myOtherFloat := 7000.1253
-	fmt.Printf("type: %T, value: %f, bytes: %d, bits: %d \n", myOtherFloat, myOtherFloat, unsafe.Sizeof(myOtherFloat), unsafe.Sizeof(myOtherFloat) * 8) */
+	fmt.Printf("type: %T, value: %f, bytes: %d, bits: %d \n", myOtherFloat, myOtherFloat, unsafe.Sizeof(myOtherFloat), unsafe.Sizeof(myOtherFloat)*8)
 
 	// STRINGS
 
@@ -116,7 +115,7 @@ func main() {
 con multiples
 lineas
 :)`
-	fmt.Printf("Mi valor es %s \n", stringVar2) 
+	fmt.Printf("Mi valor es %s \n", stringVar2)
 
 	// CONVERT TO STRING
 
@@ -130,7 +129,7 @@ lineas
 		intVar3 := 10
 		intStrVar3 := strconv.Itoa(intVar3)
 		fmt.Printf("type: %T, value: %s \n", intStrVar3, intStrVar3)
-	} */
+	}
 
 	// CONVERT TO NUMBER
 
@@ -138,10 +137,9 @@ lineas
 	fmt.Printf("type: %T, value: %d, err: %v \n", strIntVar, strIntVar, err)
 
 	strIntVar2, err := strconv.ParseInt("10", 10, 64)
-	fmt.Printf("type: %T, value: %d, err: %v \n",strIntVar2, strIntVar2, err)
+	fmt.Printf("type: %T, value: %d, err: %v \n", strIntVar2, strIntVar2, err)
 
 	strIntVar3, err := strconv.ParseFloat("10.55", 64)
-	fmt.Printf("type: %T, value: %.2	f, err: %v \n",strIntVar3, strIntVar3, err)
-
+	fmt.Printf("type: %T, value: %.2	f, err: %v \n", strIntVar3, strIntVar3, err)
 
 }
