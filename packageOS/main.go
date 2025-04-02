@@ -38,4 +38,13 @@ func main() {
 	os.Setenv("ENV_EXISTS", "")
 	env, ok := os.LookupEnv("ENV_EXISTS")
 	fmt.Println(env, ok)
+
+	os.Setenv("DB_USERNAME", "tomas")
+	os.Setenv("DB_PASSWORD", "tomas")
+	os.Setenv("DB_HOST", "127.0.0.1")
+	os.Setenv("DB_PORT", "8080")
+	os.Setenv("DB_NAME", "users")
+
+	dbURL := os.ExpandEnv("mongodb://${DB_USERNAME}:${DB_PASSWORD}@$DB_HOST:$DB_PORT:$DB_NAME")
+	fmt.Println(dbURL)
 }
