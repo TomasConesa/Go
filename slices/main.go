@@ -1,4 +1,4 @@
-package main 
+package main
 
 import (
 	"fmt"
@@ -6,10 +6,10 @@ import (
 
 func main() {
 
-	myArrayVar := [3]int {5,10,11}
+	myArrayVar := [3]int{5, 10, 11}
 	fmt.Println("Array:", myArrayVar, "- size: ", len(myArrayVar))
 
-	mySliceVar := []int {}
+	mySliceVar := []int{}
 	mySliceVar = append(mySliceVar, 88, 99, 77)
 	fmt.Println("Slice:", mySliceVar, "- size: ", len(mySliceVar))
 
